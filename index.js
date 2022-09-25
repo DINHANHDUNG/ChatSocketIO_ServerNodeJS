@@ -8,7 +8,8 @@ const http = require("http"); //Mô-đun http sử dụng trong nodejs khi bạn
 var app = express();
 const server = http.createServer(app); //Tạo mới server
 
-server.listen(3000, () => {
+const port = process.env.PORT || 3000
+server.listen(port, () => {
   //Lắng nghe server
   console.log("Server đang chay tren cong 3000");
 });
